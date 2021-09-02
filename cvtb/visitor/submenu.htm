@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>submenu</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+    #container ul
+        {
+            list-style: none;
+        }
+        
+        #container ul li
+        {
+            background-color: #3c3E94;
+            width: 150px;
+            border: 1px solid white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            color: white;
+            font-size: 15px;
+            position: relative;
+        }
+        
+        #container ul li:hover
+        {
+            background-color: #388222;
+        }
+        
+         #container ul ul
+        {
+            display: none;
+        }
+        
+         #container ul li:hover > ul
+        {
+            display: block;
+        }
+        
+         #container ul ul ul
+        {
+            margin-left: 150px;
+            top:0px;
+            position: absolute;
+        }
+    </style>
+    </head>
+    
+    <body>
+    <div id="container">
+            <ul>
+            <li>Sem1</li>
+            <li>Sem2
+                <ul>
+                <li>abc</li>
+                <li>suject <ul><li>ghi</li><li>def</li></ul></li>
+                </ul>
+                </li>
+                
+                <li>Sem3</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+
+<?php
+	session_start();
+	
+	$s = $_SESSION["user"];
+	
+	if($s)
+	{
+        $d = $_GET['id'];
+        
+		include '../admin/connection.php';
+		
+		$query = "delete from faculty_permission where fac_per_id ='$d';";
+		$result = mysqli_query($con,$query);
+        
+		if($result)
+		{
+			echo "<script>alert('faculty Perrmission Successfully Deleted.')</script>";
+			echo "<script>window.location='../admin/faculty_permission.php'</script>";
+		}
+		else
+		{
+			echo "<script>alert('Something went wrong in deleting faculty_permission.')</script>";	
+		}
+	
+	}
+	else
+	{
+		header('location:../admin/index.php');
+	}
+?>

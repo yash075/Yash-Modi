@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_table_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/button_row_height">
+
+        <Button
+            android:id="@+id/key_btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_1"/>
+
+        <Button
+            android:id="@+id/key_btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_2" />
+
+        <Button
+            android:id="@+id/key_btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_3" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/button_row_height">
+
+        <Button
+            android:id="@+id/key_btn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_4" />
+
+        <Button
+            android:id="@+id/key_btn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_5" />
+
+        <Button
+            android:id="@+id/key_btn_6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_6" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/button_row_height">
+
+        <Button
+            android:id="@+id/key_btn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_7" />
+
+        <Button
+            android:id="@+id/key_btn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_8" />
+
+        <Button
+            android:id="@+id/key_btn_9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_9" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/button_row_height">
+
+        <Button
+            android:id="@+id/key_btn_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_dot" />
+
+        <Button
+            android:id="@+id/key_btn_0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_0" />
+
+        <com.mikepenz.iconics.view.IconicsButton
+            android:id="@+id/key_btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/key_del" />
+
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,98 @@
+   *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+    #container ul
+        {
+            list-style: none;
+        }
+        
+        #container ul li 
+        {
+            background-color: #006666;
+            width: 150px;
+            border: 1px solid #006666;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            color: wheat;
+            font-size: 15px;
+            position: relative;
+            border-radius: 40px;
+        }
+a{
+    color: black;
+}
+        
+        #container ul li:hover
+        {
+            background-color: #009999;
+            border-radius: 10px;
+        }
+        
+         #container ul ul
+        {
+            display: none;
+        }
+        
+         #container ul li:hover > ul
+        {
+            display: block;
+        }
+        
+         #container ul ul ul 
+        {
+            margin-left: 150px;
+            top:0px;
+            position: absolute;
+        }
+      /*  *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+    #container ul
+        {
+            list-style: none;
+        }
+        
+        #container ul li
+        {
+            background-color: darkseagreen;
+            padding: 10px;
+            width: 150px;
+            border: 1px solid white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            position: relative;
+        }
+        
+        #container ul li:hover
+        {
+            background-color: #2e3842;
+        }
+        
+         #container ul ul 
+        {
+            display: none;
+            position: relative;
+           
+        }
+        
+         #container ul li:hover > ul
+        {
+            display: block;
+        }
+        
+         #container ul ul ul 
+        {
+            margin-left:123px;
+            top:1px;
+            position: relative;
+        }
+    */

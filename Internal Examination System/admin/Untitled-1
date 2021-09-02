@@ -1,0 +1,70 @@
+SELECT block_arrangement.b_arr_no,exam_schedule_thery.date,exam_schedule_thery.time,semester.sem_name,course.course_name,faculty.f_code,faculty.f_name 
+FROM block_arrangement INNER JOIN exam_schedule_thery ON exam_schedule_thery.exam_sch_th_id=block_arrangement.exam_sch_th_id 
+JOIN subject ON subject.sub_id=exam_schedule_thery.sub_id JOIN semester ON semester.sem_id=subject.sem_id INNER JOIN course ON course.course_id=semester.course_id JOIN faculty ON faculty.f_id=block_arrangement.f_id JOIN room_arrangement ON room_arrangement.r_id=block_arrangement.r_id
+
+
+
+
+       <label for="course" style="color:blue;font-size:20px;">Select Course</label>
+		                                    <select name="course_id" class="form-control" id="course" required>
+		                                   <option value="" selected disabled>Select Course</option>
+			                               <?php
+     
+                                            $query=mysqli_query($con,"select * from course;");
+                                            while ($row=mysqli_fetch_assoc($query)) {
+                                            ?>
+		                                          <option value="<?php echo $row['course_id'];?>"><?php echo $row['course_code']." - ".$row['course_name']; ?> </option>
+                                            <?php		 
+                                                    }
+                                            ?>			 
+		                                      </select><br><br>
+                                            
+                                            <label for="semester" style="color:blue;font-size:20px;">select Semester</label>
+                                              <select name="sem_id" class="form-control" id="semester" required>
+                                                 <option value="" selected disabled>select Semester</option>
+                                            </select><br><br>
+                                            
+                                            <label for="date" style="color:blue;font-size:20px;">select Date</label>
+                                              <select name="date" class="form-control" id="date" required>
+                                                 <option value="" selected disabled>select date</option>
+                                            </select><br><br>
+                                            
+                                            <label for="semester" style="color:blue;font-size:20px;">select Date</label>
+                                            <input type="date"class="form-control" name="sdate" id="sdate" value="<?php
+                                             while ($row=mysqli_fetch_assoc($result)) { 
+                                            echo $row['startdate'];}?>"><br><br>
+                                            
+                                            <label for="time" style="color:blue;font-size:20px;">select Time</label>
+                                            <input type="time" class="form-control" name="time"><br><br>
+                                            
+											<input type="submit" name="submit" class="btn btn-success">
+										</form>
+                                        <script>
+$(document).ready(function(){
+	$("#course").on('change',function(){
+		var courseId=$(this).val();
+		$.ajax({
+			method:"POST",
+			url:"ajax/semester_ajax.php",
+			data:{course_id:courseId},
+			dataType:"html",
+			success:function(data){
+				$("#semester").html(data);
+			}
+		});
+	});
+    
+    $("#semester").on('change',function(){
+		var semId=$(this).val();
+		$.ajax({
+			method:"POST",
+			url:"ajax/exam_th_date_ajax.php",
+			data:{sem_id:semId},
+			dataType:"html",
+			success:function(data){
+				$("#date").html(data);
+			}
+		});
+	});
+});
+</script>

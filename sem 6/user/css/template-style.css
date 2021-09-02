@@ -1,0 +1,40 @@
+header form.customform input,header form.customform button {                                                                                                             
+  margin-bottom: 0;
+}
+img.logo { 
+  max-width: 170px;
+}
+.icon-sli-basket::before {
+  color: #444;
+  font-size: 1.3rem;
+  margin-right: 5px;
+  top: 2px;
+  position: relative;
+}
+#header-carousel .owl-dots {
+  margin-top: -30px !important;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+footer {
+  background:#fff;
+  padding:3.5rem 0;
+}
+@media screen and (max-width: 768px) {
+  .right {
+    float:none;
+  }
+  nav {
+    padding: 0;
+  }
+  img.logo {
+    max-width: 170px;
+    margin: 0 auto 20px auto;
+    width: auto;
+    max-height: 40px;
+  }
+  .cart {
+    text-align: center;
+  }
+}

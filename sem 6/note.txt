@@ -1,0 +1,1 @@
+please change the  path in mainactivity.java as per your location of file & ip address.
